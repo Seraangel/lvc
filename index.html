@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laugen-Volumenrechner</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="calculator" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow">Experimentelle Berechnung</p>
+          <h1 id="page-title">Laugen-Volumenrechner</h1>
+          <p>
+            Trage die im Experiment ermittelten Faktoren ein. Die Beispielrechnung
+            kann spaeter durch die finale Formel ersetzt werden.
+          </p>
+        </div>
+
+        <form class="input-grid" id="volume-form" novalidate>
+          <label class="field">
+            <span>Welcher Faktor A wurde im Experiment ermittelt?</span>
+            <input
+              id="factor-a"
+              name="factorA"
+              type="text"
+              inputmode="decimal"
+              placeholder="z. B. 12,5"
+              autocomplete="off"
+            >
+          </label>
+
+          <label class="field">
+            <span>Welcher Faktor B wurde im Experiment ermittelt?</span>
+            <input
+              id="factor-b"
+              name="factorB"
+              type="text"
+              inputmode="decimal"
+              placeholder="z. B. 2"
+              autocomplete="off"
+            >
+          </label>
+
+          <label class="field">
+            <span>Welcher Korrekturfaktor C wurde bestimmt?</span>
+            <input
+              id="factor-c"
+              name="factorC"
+              type="text"
+              inputmode="decimal"
+              placeholder="z. B. 0,8"
+              autocomplete="off"
+            >
+          </label>
+
+          <div class="result-panel" aria-live="polite">
+            <span class="result-label">Ergebnis</span>
+            <strong id="result">Bitte alle drei Faktoren eingeben.</strong>
+          </div>
+
+          <button class="reset-button" type="reset">Eingaben zuruecksetzen</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
